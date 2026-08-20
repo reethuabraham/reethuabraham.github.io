@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reethu Abraham — Insurance Operations &amp; Automation</title>
+<meta name="description" content="Reethu Abraham — Insurance Operations Professional specializing in UK P&amp;C underwriting support, process automation, and data-driven workflows.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-deep:#0B1F33;
+    --navy-mid:#132B44;
+    --ink:#16283D;
+    --paper:#F5F1E6;
+    --paper-dim:#EEE7D6;
+    --paper-line:#DCD3B8;
+    --blueprint:#7FB3D5;
+    --blueprint-dim:#3E5C74;
+    --brass:#B8863B;
+    --brass-light:#D9AE6E;
+    --stamp:#9C4A3C;
+    --ink-soft:#4A5A6B;
+    --paper-soft:#8A8368;
+    --max-w:1120px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  ::selection{background:var(--brass-light);color:var(--navy-deep);}
+
+  .mono{
+    font-family:'IBM Plex Mono',monospace;
+    letter-spacing:0.04em;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--brass);
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:14px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:22px;
+    height:1px;
+    background:var(--brass);
+    display:inline-block;
+  }
+  .wrap{
+    max-width:var(--max-w);
+    margin:0 auto;
+    padding:0 32px;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    margin:0;
+    color:var(--navy-deep);
+  }
+  section{position:relative;}
+
+  /* ===== NAV ===== */
+  nav{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(245,241,230,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--paper-line);
+  }
+  nav .wrap{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:64px;
+  }
+  .nav-mark{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.06em;
+    color:var(--navy-deep);
+  }
+  .nav-mark span{color:var(--brass);}
+  .nav-links{
+    display:flex;
+    gap:28px;
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  .nav-links a{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    text-decoration:none;
+    color:var(--ink-soft);
+    transition:color .2s;
+  }
+  .nav-links a:hover{color:var(--brass);}
+  .nav-cta{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    text-decoration:none;
+    color:var(--paper);
+    background:var(--navy-deep);
+    padding:9px 16px;
+    border-radius:2px;
+    letter-spacing:0.04em;
+  }
+  @media (max-width:760px){
+    .nav-links{display:none;}
+  }
+
+  /* ===== HERO — title block ===== */
+  .hero{
+    background:var(--navy-deep);
+    color:var(--paper);
+    background-image:
+      linear-gradient(var(--navy-mid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--navy-mid) 1px, transparent 1px);
+    background-size:42px 42px;
+    background-position:center;
+    padding:110px 0 80px;
+    overflow:hidden;
+  }
+  .hero .wrap{
+    position:relative;
+    display:grid;
+    grid-template-columns:1.4fr 1fr;
+    gap:48px;
+    align-items:end;
+  }
+  .hero-kicker{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:var(--blueprint);
+    margin-bottom:22px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .hero-kicker::before{
+    content:"";
+    width:8px;height:8px;
+    background:var(--brass-light);
+    border-radius:50%;
+    display:inline-block;
+  }
+  .hero h1{
+    font-size:clamp(40px,6vw,68px);
+    line-height:1.04;
+    color:var(--paper);
+    font-weight:600;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--brass-light);
+    font-weight:500;
+  }
+  .hero-role{
+    margin-top:18px;
+    font-size:17px;
+    color:#C8D3DE;
+    max-width:520px;
+    line-height:1.55;
+  }
+  .hero-links{
+    margin-top:32px;
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  .hero-links a{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    text-decoration:none;
+    border:1px solid var(--blueprint-dim);
+    color:var(--paper);
+    padding:10px 16px;
+    border-radius:2px;
+    transition:all .2s;
+    letter-spacing:0.03em;
+  }
+  .hero-links a.primary{
+    background:var(--brass);
+    border-color:var(--brass);
+    color:var(--navy-deep);
+    font-weight:600;
+  }
+  .hero-links a:hover{border-color:var(--blueprint);}
+  .hero-links a.primary:hover{background:var(--brass-light);}
+
+  /* title-block card */
+  .title-block{
+    border:1px solid var(--blueprint-dim);
+    background:rgba(11,31,51,0.6);
+    padding:22px 24px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    color:#B9C6D2;
+  }
+  .title-block .tb-row{
+    display:flex;
+    justify-content:space-between;
+    padding:8px 0;
+    border-bottom:1px solid rgba(127,179,213,0.18);
+  }
+  .title-block .tb-row:last-child{border-bottom:none;}
+  .title-block .tb-label{
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:var(--blueprint);
+  }
+  .title-block .tb-val{color:var(--paper);text-align:right;}
+
+  /* ===== SECTION HEADER pattern ===== */
+  .sec{padding:88px 0;}
+  .sec-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:24px;
+    margin-bottom:48px;
+    border-bottom:1px solid var(--paper-line);
+    padding-bottom:24px;
+  }
+  .sec-head h2{font-size:clamp(28px,3.4vw,38px);}
+  .sec-num{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    color:var(--paper-soft);
+  }
+
+  /* ===== ABOUT ===== */
+  .about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:56px;
+  }
+  .about-lede{
+    font-family:'Fraunces',serif;
+    font-size:26px;
+    line-height:1.5;
+    color:var(--navy-deep);
+    font-weight:500;
+  }
+  .about-lede em{color:var(--brass);font-style:normal;}
+  .about-body p{color:var(--ink-soft);font-size:15.5px;margin:0 0 16px;}
+  .stat-row{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:28px;
+  }
+  .stat{
+    border-left:2px solid var(--brass);
+    padding-left:14px;
+  }
+  .stat .num{
+    font-family:'Fraunces',serif;
+    font-size:30px;
+    font-weight:600;
+    color:var(--navy-deep);
+    display:block;
+  }
+  .stat .lbl{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    color:var(--paper-soft);
+  }
+
+  /* ===== EXPERIENCE — case files ===== */
+  .sec-alt{background:var(--paper-dim);}
+  .case-file{
+    border:1px solid var(--paper-line);
+    background:var(--paper);
+    margin-bottom:22px;
+    position:relative;
+  }
+  .case-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    padding:22px 26px;
+    gap:20px;
+    flex-wrap:wrap;
+  }
+  .case-head-left h3{font-size:21px;}
+  .case-head-left .co{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;
+    color:var(--ink-soft);
+    margin-top:4px;
+  }
+  .case-meta{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;
+    text-align:right;
+    color:var(--paper-soft);
+    white-space:nowrap;
+  }
+  .case-meta .stamp{
+    display:inline-block;
+    margin-top:6px;
+    border:1.5px solid var(--stamp);
+    color:var(--stamp);
+    padding:3px 8px;
+    border-radius:2px;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    font-size:10px;
+    transform:rotate(-2deg);
+  }
+  .case-body{
+    padding:0 26px 24px;
+    border-top:1px dashed var(--paper-line);
+    margin-top:2px;
+  }
+  .case-body ul{
+    margin:18px 0 0;
+    padding:0;
+    list-style:none;
+  }
+  .case-body li{
+    position:relative;
+    padding-left:20px;
+    margin-bottom:11px;
+    font-size:14.5px;
+    color:var(--ink-soft);
+  }
+  .case-body li::before{
+    content:"›";
+    position:absolute;
+    left:0;
+    color:var(--brass);
+    font-weight:700;
+  }
+
+  /* ===== SKILLS ===== */
+  .skill-cols{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+  }
+  .skill-col h3{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    color:var(--brass);
+    font-weight:600;
+    margin-bottom:18px;
+    padding-bottom:10px;
+    border-bottom:1px solid var(--paper-line);
+  }
+  .chip-row{display:flex;flex-wrap:wrap;gap:10px;}
+  .chip{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;
+    border:1px solid var(--navy-deep);
+    color:var(--navy-deep);
+    padding:7px 13px;
+    border-radius:2px;
+    background:transparent;
+  }
+  .skill-col.tech .chip{
+    border-color:var(--blueprint-dim);
+    color:var(--navy-mid);
+  }
+
+  /* ===== PROJECTS — blueprint sheets ===== */
+  .proj-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+  }
+  .blueprint-card{
+    background:var(--navy-deep);
+    color:var(--paper);
+    border:1px solid var(--blueprint-dim);
+    padding:28px;
+    background-image:
+      linear-gradient(var(--navy-mid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--navy-mid) 1px, transparent 1px);
+    background-size:28px 28px;
+    position:relative;
+    min-height:260px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+  .bp-top{
+    display:flex;
+    justify-content:space-between;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    color:var(--blueprint);
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+  }
+  .blueprint-card h3{
+    color:var(--paper);
+    font-size:22px;
+    margin-top:18px;
+  }
+  .blueprint-card p{
+    color:#B9C6D2;
+    font-size:14px;
+    margin-top:10px;
+    line-height:1.6;
+  }
+  .bp-tags{
+    margin-top:20px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .bp-tags span{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10.5px;
+    border:1px solid var(--blueprint-dim);
+    color:var(--blueprint);
+    padding:4px 9px;
+    border-radius:2px;
+  }
+  .bp-foot{
+    margin-top:22px;
+    padding-top:14px;
+    border-top:1px solid rgba(127,179,213,0.25);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    color:var(--brass-light);
+  }
+
+  /* ===== EDUCATION / CERT ===== */
+  .ed-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+  }
+  .ed-item{
+    border-left:2px solid var(--paper-line);
+    padding-left:18px;
+    margin-bottom:20px;
+  }
+  .ed-item h4{
+    font-family:'Fraunces',serif;
+    font-size:17px;
+    margin:0 0 4px;
+    color:var(--navy-deep);
+    font-weight:600;
+  }
+  .ed-item .sub{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    color:var(--paper-soft);
+  }
+  .cert-list{list-style:none;margin:0;padding:0;}
+  .cert-list li{
+    padding:12px 0;
+    border-bottom:1px solid var(--paper-line);
+    font-size:14.5px;
+    color:var(--ink-soft);
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .cert-list li::before{
+    content:"✓";
+    color:var(--brass);
+    font-family:'IBM Plex Mono',monospace;
+    font-weight:600;
+  }
+
+  /* ===== CONTACT / FOOTER ===== */
+  footer{
+    background:var(--navy-deep);
+    color:var(--paper);
+    padding:90px 0 40px;
+  }
+  .foot-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    flex-wrap:wrap;
+    gap:24px;
+    padding-bottom:40px;
+    border-bottom:1px solid var(--blueprint-dim);
+  }
+  footer h2{
+    color:var(--paper);
+    font-size:clamp(30px,4vw,46px);
+    max-width:560px;
+    line-height:1.2;
+  }
+  footer h2 em{color:var(--brass-light);font-style:italic;}
+  .foot-links{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13.5px;
+  }
+  .foot-links a{text-decoration:none;color:#C8D3DE;}
+  .foot-links a:hover{color:var(--brass-light);}
+  .foot-bottom{
+    margin-top:28px;
+    display:flex;
+    justify-content:space-between;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;
+    color:var(--blueprint-dim);
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  @media (max-width:860px){
+    .hero .wrap{grid-template-columns:1fr;}
+    .about-grid,.skill-cols,.proj-grid,.ed-grid{grid-template-columns:1fr;}
+    .sec{padding:64px 0;}
+  }
+
+  /* reveal on scroll */
+  .reveal{opacity:1;}
+  .js-ready .reveal{
+    opacity:0;
+    transform:translateY(18px);
+    transition:opacity .6s ease, transform .6s ease;
+  }
+  .js-ready .reveal.in{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion:reduce){
+    .js-ready .reveal{opacity:1;transform:none;transition:none;}
+  }
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js-ready');</script>
+
+<nav>
+  <div class="wrap">
+    <div class="nav-mark">REETHU ABRAHAM <span>· FILE 2026</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+    </ul>
+    <a class="nav-cta" href="mailto:reethuabraham24@gmail.com">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="hero-kicker">Case Ref. RA-2026 · Open to Opportunities</div>
+      <h1>Precision in<br>process. <em>Curiosity</em><br>in engineering.</h1>
+      <p class="hero-role">I process the claims and submissions that keep UK P&amp;C insurers running on time — and I build the automation that makes them run faster. Insurance operations by trade, robotics engineer by training.</p>
+      <div class="hero-links">
+        <a class="primary" href="mailto:reethuabraham24@gmail.com">Email me</a>
+        <a href="https://www.linkedin.com/in/reethuabraham-6b7776212" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="tel:+918330819767">+91 83308 19767</a>
+      </div>
+    </div>
+    <div class="title-block">
+      <div class="tb-row"><span class="tb-label">Role</span><span class="tb-val">Insurance Ops · Underwriting Support</span></div>
+      <div class="tb-row"><span class="tb-label">Based</span><span class="tb-val">Mangaluru, Karnataka, IN</span></div>
+      <div class="tb-row"><span class="tb-label">Experience</span><span class="tb-val">1 yr 11 mo — Infosys BPM</span></div>
+      <div class="tb-row"><span class="tb-label">Quality score</span><span class="tb-val">98%</span></div>
+      <div class="tb-row"><span class="tb-label">Education</span><span class="tb-val">B.Tech, Robotics &amp; Automation</span></div>
+      <div class="tb-row"><span class="tb-label">Patent</span><span class="tb-val">Govt. of India, 2024</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>About</h2>
+      <span class="sec-num mono">01 / FILE</span>
+    </div>
+    <div class="about-grid">
+      <p class="about-lede reveal">I read insurance submissions the way I once read circuit diagrams — <em>looking for what's missing, what doesn't add up, and where the process can be tightened.</em></p>
+      <div class="about-body reveal">
+        <p>I'm an insurance operations professional at Infosys BPM, supporting UK Property &amp; Casualty underwriting and policy processing. My days are spent validating submission data, resolving documentation gaps, and keeping every case inside its SLA — currently at a 98% quality score across a high-volume queue.</p>
+        <p>Before operations, I trained as a robotics and automation engineer. That background hasn't gone quiet — I built a Python-based workflow tracker that cut my team's average turnaround time by 15%, and I hold a Government of India patent for an AI-enabled smart shopping cart system built during my degree. I like operational work precisely because it rewards the same instincts engineering does: find the fault, fix the root cause, automate what shouldn't be manual.</p>
+        <div class="stat-row">
+          <div class="stat"><span class="num">98%</span><span class="lbl">Quality score</span></div>
+          <div class="stat"><span class="num">15%</span><span class="lbl">TAT reduction shipped</span></div>
+          <div class="stat"><span class="num">25–30</span><span class="lbl">Cases processed / day</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="experience">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Experience</h2>
+      <span class="sec-num mono">02 / CASE FILES</span>
+    </div>
+
+    <div class="case-file reveal">
+      <div class="case-head">
+        <div class="case-head-left">
+          <h3>Senior Process Executive</h3>
+          <div class="co">Infosys BPM — Mangaluru, Karnataka</div>
+        </div>
+        <div class="case-meta">
+          DEC 2025 — PRESENT<br>
+          <span class="stamp">Active</span>
+        </div>
+      </div>
+      <div class="case-body">
+        <ul>
+          <li>Process 25–30+ UK Property &amp; Casualty insurance submissions daily as an Underwriting Assistant, validating and capturing accurate policy and case data.</li>
+          <li>Maintain a 98% quality score while consistently meeting SLA, TAT, and productivity targets in a high-volume operational environment.</li>
+          <li>Built a Python-based workflow tracking tool that improved case visibility and contributed to a 15% reduction in average team turnaround time.</li>
+          <li>Investigate recurring processing exceptions and coordinate with stakeholders to resolve queries within agreed timelines.</li>
+          <li>Mentor 3–5 junior associates on process procedures, documentation standards, and quality checks.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="case-file reveal">
+      <div class="case-head">
+        <div class="case-head-left">
+          <h3>Process Executive</h3>
+          <div class="co">Infosys BPM — Mangaluru, Karnataka</div>
+        </div>
+        <div class="case-meta">
+          MAY 2025 — DEC 2025<br>
+          <span class="stamp">Closed</span>
+        </div>
+      </div>
+      <div class="case-body">
+        <ul>
+          <li>Managed end-to-end UK insurance Submission &amp; Clearance activities in line with SOPs, business rules, and quality controls.</li>
+          <li>Reviewed high-volume transaction and documentation data, resolving discrepancies while maintaining accuracy and turnaround targets.</li>
+          <li>Performed data validation and reconciliation, coordinating with internal stakeholders to close missing information and processing exceptions.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="case-file reveal">
+      <div class="case-head">
+        <div class="case-head-left">
+          <h3>Process Trainee</h3>
+          <div class="co">Infosys BPM — Mysore, Karnataka</div>
+        </div>
+        <div class="case-meta">
+          OCT 2024 — MAY 2025<br>
+          <span class="stamp">Closed</span>
+        </div>
+      </div>
+      <div class="case-body">
+        <ul>
+          <li>Completed training in UK insurance operations, business rules, workflow controls, documentation standards, and quality requirements.</li>
+          <li>Achieved process certification and progressed to Process Executive based on process accuracy and performance.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="skills">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Skills</h2>
+      <span class="sec-num mono">03 / TOOLING</span>
+    </div>
+    <div class="skill-cols">
+      <div class="skill-col reveal">
+        <h3>Insurance &amp; Operations</h3>
+        <div class="chip-row">
+          <span class="chip">Insurance Operations</span>
+          <span class="chip">Underwriting Support</span>
+          <span class="chip">Policy Processing</span>
+          <span class="chip">Data Validation</span>
+          <span class="chip">SLA / TAT Management</span>
+          <span class="chip">Documentation</span>
+          <span class="chip">Quality Assurance</span>
+          <span class="chip">Stakeholder Coordination</span>
+        </div>
+      </div>
+      <div class="skill-col tech reveal">
+        <h3>Technical &amp; Automation</h3>
+        <div class="chip-row">
+          <span class="chip">Python</span>
+          <span class="chip">SQL</span>
+          <span class="chip">Microsoft Excel</span>
+          <span class="chip">Workflow Automation</span>
+          <span class="chip">Machine Learning Fundamentals</span>
+          <span class="chip">Embedded Systems</span>
+          <span class="chip">Google Cloud (Cert.)</span>
+          <span class="chip">Process Improvement</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Projects</h2>
+      <span class="sec-num mono">04 / BLUEPRINTS</span>
+    </div>
+    <div class="proj-grid">
+      <div class="blueprint-card reveal">
+        <div>
+          <div class="bp-top"><span>SHEET 01</span><span>PATENTED · 2024</span></div>
+          <h3>AI-Based Smart Trolley System</h3>
+          <p>An AI-enabled retail automation cart combining item detection, weight verification, and automated billing — built using Python, machine-learning fundamentals, and embedded systems. Granted a Government of India patent.</p>
+        </div>
+        <div>
+          <div class="bp-tags"><span>Python</span><span>Computer Vision</span><span>Embedded Systems</span></div>
+          <div class="bp-foot">GOVT. OF INDIA PATENT — GRANTED</div>
+        </div>
+      </div>
+      <div class="blueprint-card reveal">
+        <div>
+          <div class="bp-top"><span>SHEET 02</span><span>DEPLOYED · 2026</span></div>
+          <h3>Workflow Tracking Automation</h3>
+          <p>A Python-based tracker built to monitor live insurance cases, surface bottlenecks, and prioritize work by age and risk — now in daily use across the team.</p>
+        </div>
+        <div>
+          <div class="bp-tags"><span>Python</span><span>Process Design</span><span>Reporting</span></div>
+          <div class="bp-foot">RESULT — 15% AVG. TAT REDUCTION</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="education">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Education &amp; Certifications</h2>
+      <span class="sec-num mono">05 / RECORD</span>
+    </div>
+    <div class="ed-grid">
+      <div class="reveal">
+        <div class="ed-item">
+          <h4>B.Tech, Robotics &amp; Automation Engineering</h4>
+          <div class="sub">Saintgits College of Engineering, Kottayam · 2020 – 2024</div>
+        </div>
+      </div>
+      <div class="reveal">
+        <ul class="cert-list">
+          <li>IT Infrastructure and Emerging Trends</li>
+          <li>Google Cloud Certification</li>
+          <li>Registration of Design</li>
+          <li>Problem Solving &amp; Decision Making</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-head">
+      <h2>Let's talk about <em>process</em> — and how to make it better.</h2>
+      <div class="foot-links">
+        <a href="mailto:reethuabraham24@gmail.com">reethuabraham24@gmail.com</a>
+        <a href="tel:+918330819767">+91 83308 19767</a>
+        <a href="https://www.linkedin.com/in/reethuabraham-6b7776212" target="_blank" rel="noopener">linkedin.com/in/reethuabraham-6b7776212</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Reethu Abraham — Mangaluru, Karnataka, India</span>
+      <span>REV. 03 · UPDATED AUG 2026</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  }, {threshold:0.15});
+  els.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
